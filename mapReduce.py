@@ -13,7 +13,7 @@ def csv_readline(line):
     for row in csv.reader([line]):
         return row
 
-class OrderDateCount(MRJob):
+class OrderDateTotalPrice(MRJob):
 
     def steps(self):
         return [
@@ -44,4 +44,4 @@ class OrderDateCount(MRJob):
            yield order_date, order_price
 
 if __name__ == '__main__':
-    OrderDateCount.run()
+    OrderDateTotalPrice.run()
